@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 40%;
+  height: 100%;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background-color: orangered;
+  border-radius: 10px 10px 0 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+label {
+  margin-top: 20px;
+  font-size: small;
+  font-weight: 700;
+  background-color: rgb(200, 200, 200);
+  border-radius: 10px 10px 0 0;
+  padding: 5px 0 5px 10px;
+}
+
+input,
+select,
+option {
+  font-family: "Poppins", sans-serif;
+  height: 30px;
+  border-radius: 0 0 10px 10px;
+  padding-left: 10px;
+  border: none;
+  background-color: rgb(232, 232, 232);
+}
+
+select {
+  cursor: pointer;
+}
+textarea {
+  font-family: "Poppins", sans-serif;
+  resize: none;
+  padding: 10px;
+  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
+  border: none;
+  background-color: rgb(232, 232, 232);
+}
+
+button {
+  margin-top: 10px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: orangered;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(208, 55, 0);
+}
