@@ -186,10 +186,15 @@ label {
   margin-top: 10px;
   padding: 8px 20px;
   font-size: 17px;
-  background: rgb(255, 94, 35);
+  background: orangered;
   border-radius: 8px;
   border: none;
   color: #fff;
+  cursor: pointer;
+}
+
+.blog-form form button:hover {
+  background-color: rgb(208, 55, 0);
   cursor: pointer;
 }
 
@@ -226,7 +231,6 @@ label {
 
 .detail-blog-content {
   font-size: 10px;
-  margin-bottom: 20px;
 }
 
 .blog-list-item p {
@@ -240,6 +244,7 @@ label {
 }
 
 .tec-icon h6 {
+  color: gray;
   font-size: 20px;
   margin-right: 30px;
 }
@@ -260,6 +265,11 @@ label {
   width: 50%;
 }
 
+.btn-edit:hover {
+  background-color: #c4c4c4;
+  cursor: pointer;
+}
+
 .btn-group .btn-post {
   font-family: "Poppins", sans-serif;
   border: none;
@@ -267,4 +277,9 @@ label {
   background-color: orangered;
   width: 50%;
   color: white;
+}
+
+.btn-post:hover {
+  background-color: rgb(208, 55, 0);
+  cursor: pointer;
 }
