@@ -76,3 +76,9 @@ button {
 button:hover {
   background-color: rgb(208, 55, 0);
 }
+
+@media only screen and (max-width: 600px) {
+  section {
+    width: 80%;
+  }
+}

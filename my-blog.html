@@ -9,6 +9,7 @@
       src="https://kit.fontawesome.com/c99e3a2c05.js"
       crossorigin="anonymous"
     ></script>
+    <script src="js/navbar.js"></script>
   </head>
   <body>
     <nav>
@@ -20,7 +21,10 @@
               <a href="index.html">Home</a>
             </li>
             <li>
-              <a href="#" style="color: orangered">My Poject</a>
+              <a href="my-blog.html" style="color: orangered">My Poject</a>
+            </li>
+            <li>
+              <a href="contact.html" class="sign-up">Sign up</a>
             </li>
           </ul>
         </div>
@@ -30,6 +34,9 @@
               <a href="contact.html">Sign up</a>
             </li>
           </ul>
+        </div>
+        <div class="nav-hamburger">
+          <i class="fa-solid fa-bars" style="color: #ff4500;"></i>
         </div>
       </div>
     </nav>
@@ -58,26 +65,47 @@
                 rows="10"
               ></textarea>
             </div>
+            
             <label for="">Technologies</label>
-            <div class="tec">
-              <div class="tec-left">
-                <label for="react-js">
-                  <input type="checkbox" id="react-js" />React JS</label
-                >
-
-                <label for="next-js"
-                  ><input type="checkbox" id="next-js" />Next JS</label
-                >
-              </div>
-              <div class="tec-right">
-                <label for="node-js"
-                  ><input type="checkbox" id="node-js" />Node JS</label
-                >
-
-                <label for="typescript"
-                  ><input type="checkbox" id="typescript" />Typescript</label
-                >
-              </div>
+              <div class="container">
+                <div class="input-box-wrapper">
+                  <div class="box">
+                    <input
+                      type="checkbox"
+                      value="javascript"
+                      class="checkbox"
+                      id="javascript"
+                    />
+                    <label for="javascript">Javascript&emsp;</label>
+                  </div>
+                  <div class="box">
+                    <input
+                      type="checkbox"
+                      value="React JS"
+                      class="checkbox"
+                      id="react-js"
+                    />
+                    <label for="react-js">React JS&emsp;</label>
+                  </div>
+                  <div class="box">
+                    <input
+                      type="checkbox"
+                      value="Next JS"
+                      class="checkbox"
+                      id="next-js"
+                    />
+                    <label for="next-js">Next JS&emsp;</label>
+                  </div>
+                  <div class="box">
+                    <input
+                      type="checkbox"
+                      value="typescript"
+                      class="checkbox"
+                      id="typescript"
+                    />
+                    <label for="typescript">Typescript&emsp;</label>
+                  </div>
+                </div>
             </div>
 
             <div class="label-img">
@@ -117,10 +145,7 @@
             amet consectetur adipisicing elit. Quam, molestiae numquam! Deleniti
             maiores expedita eaque deserunt quaerat! Dicta, eligendi debitis?
           </p>
-          <div class="tec-icon">
-            <h6><i class="fa-brands fa-android"></i></h6>
-            <h6><i class="fa-solid fa-mug-saucer"></i></h6>
-            <h6><i class="fa-solid fa-camera-retro"></i></h6>
+          <div class="tec-icon" style="margin-top: 10px; font-size: 10px;">React JS
           </div>
           <div class="btn-group">
             <button class="btn-edit">Edit Post</button>

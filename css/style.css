@@ -59,6 +59,10 @@ body {
   transition: border-bottom 0.3s ease-in-out;
 }
 
+.sign-up {
+  display: none;
+}
+
 .nav-right ul li a {
   color: white;
   text-decoration: none;
@@ -72,6 +76,11 @@ body {
 .nav-right ul li a:hover {
   background-color: rgb(208, 55, 0);
 }
+
+.nav-hamburger {
+  display: none;
+}
+
 
 /* Section style */
 
@@ -165,4 +174,108 @@ body {
 .card-id {
   text-align: center;
   padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-left ul,
+    .nav-right ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      background-color: #ebebeb;
+      top: 65px;
+      border-radius: 10px;
+      left: 0;
+      width: 100%;
+      align-items: center;
+    }
+
+    .navbar.active .nav-left ul,
+    .navbar.active .nav-right ul {
+      display: flex;
+      
+    }
+
+    .nav-left ul li {
+      margin-top: 10px;
+    }
+
+    .nav-left .sign-up {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    .nav-right {
+      display: none;
+    }
+
+    .nav-hamburger {
+      display: block;
+      cursor: pointer;
+    }
+
+    .navbar.active .nav-hamburger i {
+      color: #fff;
+    }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+
+  .about {
+    padding-top: 0;
+  }
+
+  .about h1 {
+    font-size: 20px;
+    margin-top: 0;
+  }
+
+  .about p {
+    font-size: 10px;
+    width: 100%;
+  }
+  .btn {
+    margin-top: 30px;
+    display: flex;
+    width: 80%;
+    text-align: center;
+  }
+
+  .social-media {
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .about {
+    padding-top: 0;
+  }
+
+  .btn {
+    margin-top: 30px;
+    display: flex;
+    width: 80%;
+    text-align: center;
+  }
+
+  .social-media {
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+  }
 }
