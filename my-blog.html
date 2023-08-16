@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/my-blog.css" />
+    <title>My Project</title>
+    <script
+      src="https://kit.fontawesome.com/c99e3a2c05.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/navbar.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="nav-left">
+          <img src="image/logo.png" alt="" />
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="my-blog.html" style="color: orangered">My Poject</a>
+            </li>
+            <li>
+              <a href="contact.html" class="sign-up">Sign up</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <ul>
+            <li>
+              <a href="contact.html">Sign up</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-hamburger">
+          <i class="fa-solid fa-bars" style="color: #ff4500;"></i>
+        </div>
+      </div>
+    </nav>
+
+    <div class="blog">
+      <div class="blog-form">
+        <div class="form-container">
+          <form onsubmit="addBlog(event)">
+            <h1>Create Post Blog</h1>
+            <div>
+              <label for="input-blog-title">Project name</label>
+              <input id="input-blog-title" placeholder="Your title" />
+            </div>
+            <div class="input-date">
+              <label for="date-input-start">Start date</label>
+              <input type="date" id="date-input-start" />
+              <label for="date-input-end">End date</label>
+              <input type="date" id="date-input-end" />
+            </div>
+
+            <div>
+              <label for="input-blog-content">Description</label>
+              <textarea
+                id="input-blog-content"
+                placeholder="Your content"
+                rows="10"
+              ></textarea>
+            </div>
+            
+            <label for="">Technologies</label>
+              <div class="container">
+                <div class="input-box-wrapper">
+                  <div class="box">
+                    <input
+                      type="checkbox"
+                      value="javascript"
+                      class="checkbox"
+                      id="javascript"
+                    />
+                    <label for="javascript">Javascript&emsp;</label>
+                  </div>
+                  <div class="box">
+                    <input
+                      type="checkbox"
+                      value="React JS"
+                      class="checkbox"
+                      id="react-js"
+                    />
+                    <label for="react-js">React JS&emsp;</label>
+                  </div>
+                  <div class="box">
+                    <input
+                      type="checkbox"
+                      value="Next JS"
+                      class="checkbox"
+                      id="next-js"
+                    />
+                    <label for="next-js">Next JS&emsp;</label>
+                  </div>
+                  <div class="box">
+                    <input
+                      type="checkbox"
+                      value="typescript"
+                      class="checkbox"
+                      id="typescript"
+                    />
+                    <label for="typescript">Typescript&emsp;</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="label-img">
+              <label>Upload Image</label>
+              <div class="input-blog-image-group">
+                <label for="input-blog-image">
+                  <p>Attach File</p>
+                  <img src="image/file.png" alt="file" />
+                </label>
+                <input type="file" id="input-blog-image" hidden />
+              </div>
+            </div>
+            <div class="button-group">
+              <button>Post Blog</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <hr class="line" />
+      <div id="contents" class="blog-list">
+        <div class="blog-list-item">
+          <div class="blog-image">
+            <img src="image/project.jpg" alt="" />
+            <p style="font-size: 10px; color: grey">Diposting pada </p>
+          </div>
+          <h1>
+            <a href="detail-blog.html" target="_blank">E-Commerce website</a>
+          </h1>
+          <div class="detail-blog-content">11-11-2011 sampai 11-11-2022</div>
+          <p style="margin-bottom: 20px">Durasi : 4 bulan</p>
+          <p>
+            Ketimpangan sumber daya manusia (SDM) di sektor digital masih
+            menjadi isu yang belum terpecahkan. Berdasarkan penelitian
+            ManpowerGroup, ketimpangan SDM global, termasuk Indonesia, meningkat
+            dua kali lipat dalam satu dekade terakhir. Lorem ipsum, dolor sit
+            amet consectetur adipisicing elit. Quam, molestiae numquam! Deleniti
+            maiores expedita eaque deserunt quaerat! Dicta, eligendi debitis?
+          </p>
+          <div class="tec-icon" style="margin-top: 10px; font-size: 10px;">React JS
+          </div>
+          <div class="btn-group">
+            <button class="btn-edit">Edit Post</button>
+            <button class="btn-post">Delete Post</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/my-blog.js"></script>
+  </body>
+</html>

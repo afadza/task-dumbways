@@ -3,14 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script
       src="https://kit.fontawesome.com/c99e3a2c05.js"
       crossorigin="anonymous"
     ></script>
-    <title>Day 1</title>
+    <script src="js/navbar.js"></script>
+    <title>Personal Website</title>
   </head>
   <body>
+    <nav>
+      <div class="navbar">
+        <div class="nav-left">
+          <img src="image/logo.png" alt="" />
+          <ul>
+            <li>
+              <a href="#" style="color: orangered">Home</a>
+            </li>
+            <li>
+              <a href="my-blog.html">My Poject</a>
+            </li>
+            <li>
+              <a href="contact.html" class="sign-up">Sign up</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <ul>
+            <li>
+              <a href="contact.html">Sign up</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-hamburger">
+          <i class="fa-solid fa-bars" style="color: #ff4500;"></i>
+        </div>
+      </div>
+    </nav>
+
+
     <div class="container">
       <div class="about">
         <h1>Hi, Welcome to my put</h1>
@@ -23,18 +54,19 @@
           excepturi fugit rerum ullam!
         </p>
         <div class="btn">
-          <button class="contact-button">Contact</button>
+            <a href="#" class="contact-button">Contact me</a>
           <button class="download-button">
-            download CV <i class="fa-solid fa-download"></i>
+            Download CV<i class="fa-solid fa-download"></i>
           </button>
         </div>
+        <div class="social-media">
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-square-instagram"></i>
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-square-twitter"></i>
+        </div>
       </div>
-      <div class="social-media">
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-square-instagram"></i>
-        <i class="fa-brands fa-square-facebook"></i>
-        <i class="fa-brands fa-square-twitter"></i>
-      </div>
+
       <div class="card">
         <img src="image/my-img.jpg" alt="" />
         <div class="card-id">
