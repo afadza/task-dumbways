@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <section>
+      <h1>Login</h1>
+      <form action="">
+        <label for="input-name">Name</label>
+        <input type="text" id="input-name" placeholder="Your full name" />
+
+        <label for="input-email">Email</label>
+        <input type="email" id="input-email" placeholder="Your mail" />
+
+        <label for="input-phone">Phone</label>
+        <input type="number" id="input-phone" placeholder="+62" />
+
+        <label for="input-stack">Your Stack</label>
+        <select name="" id="input-stack">
+          <option value="" hidden>select</option>
+          <option value="frontend">Frontend</option>
+          <option value="backend">Backend</option>
+          <option value="fullstack">fullstack</option>
+        </select>
+
+        <label for="input-reason">Your Reason</label>
+        <textarea
+          name=""
+          id="input-reason"
+          cols="30"
+          rows="10"
+          placeholder="Input the reason you chose the stack "
+        ></textarea>
+        <button type="button" onclick="submitData()">Submit</button>
+      </form>
+    </section>
+
+    <script src="js/contact.js"></script>
+  </body>
+</html>
