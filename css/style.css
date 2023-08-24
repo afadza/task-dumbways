@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(179, 179, 179);
+}
+
+/* Navbar style */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(237, 237, 237);
+  padding: 20px 50px;
+  font-weight: 700;
+  height: 20px;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left img {
+  margin-right: 50px;
+}
+
+.nav-left ul {
+  display: flex;
+}
+
+.nav-left ul li a {
+  padding-bottom: 5px;
+}
+
+.nav-left ul li a:hover {
+  padding-bottom: 5px;
+  border-bottom: 1px solid orangered;
+}
+
+.nav-left ul li,
+.nav-right ul li {
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+.nav-left ul li a,
+.nav-right ul li a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease-in-out;
+}
+
+.sign-up {
+  display: none;
+}
+
+.nav-right ul li a {
+  color: white;
+  text-decoration: none;
+  background-color: orangered;
+  padding: 5px 20px;
+  border-radius: 15px;
+  font-weight: 100;
+  font-size: 10px;
+}
+
+.nav-right ul li a:hover {
+  background-color: rgb(208, 55, 0);
+}
+
+.nav-hamburger {
+  display: none;
+}
+
+
+/* Section style */
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  width: 80%;
+  margin: 20px auto;
+  font-size: 15px;
+  padding: 40px;
+  display: flex;
+}
+
+.about {
+  flex: 70%;
+  padding-top: 50px;
+}
+
+.about p {
+  width: 75%;
+}
+
+.btn {
+  margin-top: 30px;
+  display: flex;
+  width: 50%;
+}
+
+.contact-button {
+  background-color: orangered;
+  color: white;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  padding: 10px 30px;
+  font-size: 10px;
+}
+
+.contact-button:hover {
+  background-color: rgb(208, 55, 0);
+}
+
+.btn a {
+  text-decoration: none;
+}
+
+.download-button {
+  background-color: rgb(211, 211, 211);
+  border-radius: 0 10px 10px 0;
+  border: none;
+  text-align: start;
+  padding: 10px 30px;
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  background-color: silver;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-media i {
+  font-size: 30px;
+  margin: 20px 20px;
+  cursor: pointer;
+}
+
+.social-media i:hover {
+  color: orangered;
+}
+
+.social-media i:first-child {
+  margin-left: 0;
+}
+
+.card {
+  width: 70%;
+  box-shadow: 0 0 10px;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-id {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-left ul,
+    .nav-right ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      background-color: #ebebeb;
+      top: 65px;
+      border-radius: 10px;
+      left: 0;
+      width: 100%;
+      align-items: center;
+    }
+
+    .navbar.active .nav-left ul,
+    .navbar.active .nav-right ul {
+      display: flex;
+      
+    }
+
+    .nav-left ul li {
+      margin-top: 10px;
+    }
+
+    .nav-left .sign-up {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    .nav-right {
+      display: none;
+    }
+
+    .nav-hamburger {
+      display: block;
+      cursor: pointer;
+    }
+
+    .navbar.active .nav-hamburger i {
+      color: #fff;
+    }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+
+  .about {
+    padding-top: 0;
+  }
+
+  .about h1 {
+    font-size: 20px;
+    margin-top: 0;
+  }
+
+  .about p {
+    font-size: 10px;
+    width: 100%;
+  }
+  .btn {
+    margin-top: 30px;
+    display: flex;
+    width: 80%;
+    text-align: center;
+  }
+
+  .social-media {
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .about {
+    padding-top: 0;
+  }
+
+  .btn {
+    margin-top: 30px;
+    display: flex;
+    width: 80%;
+    text-align: center;
+  }
+
+  .social-media {
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
