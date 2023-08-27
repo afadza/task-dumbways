@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Personal Website</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/c99e3a2c05.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="JS/my-project.js"></script>
+  </head>
+
+  <body style="font-family: 'Poppins', sans-serif">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-5 fw-bold">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../DAY 1-9/image/logo.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="my-project.html"
+                style="color: orangered"
+                >Add Project</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonials</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button
+              type="button"
+              class="btn"
+              style="background-color: orangered"
+            >
+              <a
+                href="contact-me.html"
+                class="link-secondary"
+                style="text-decoration: none; color: white"
+                >Contact me</a
+              >
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Input Project -->
+    <div class="container" style="width: 30%">
+      <form name="frm" class="mt-5" onsubmit="addBlog(event)">
+        <div class="mb-3">
+          <label for="input-name-project" class="form-label"
+            >Project name</label
+          >
+          <input type="text" class="form-control" id="input-name-project" />
+        </div>
+        <div class="d-flex mb-3">
+          <div style="width: 50%">
+            <label for="date-start">Date start</label>
+            <input type="date" id="date-start" style="width: 95%" />
+          </div>
+          <div style="width: 50%">
+            <label for="date-end">Date end</label>
+            <input type="date" id="date-end" style="width: 100%" />
+          </div>
+        </div>
+        <div class="d-flex flex-column">
+          <label for="input-text-area">Description</label>
+          <textarea
+            name=""
+            id="input-text-area"
+            cols="30"
+            rows="10"
+            style="resize: none"
+          ></textarea>
+        </div>
+        <p class="mt-3">Technoligies</p>
+        <div class="d-flex mb-3" style="font-size: 13px">
+          <input
+            type="checkbox"
+            name="checkStack"
+            value="React JS&emsp;"
+            class="me-1"
+          />React JS
+          <input
+            type="checkbox"
+            name="checkStack"
+            value="Javascript&emsp;"
+            class="ms-3 me-1"
+          />Javascript
+          <input
+            type="checkbox"
+            name="checkStack"
+            value="HTML&emsp;"
+            class="ms-3 me-1"
+          />HTML
+          <input
+            type="checkbox"
+            name="checkStack"
+            value="Bootstrap&emsp;"
+            class="ms-3 me-1"
+          />Bootstrap
+        </div>
+        <div class="mb-3">
+          <label for="input-image" class="form-label">Upload image</label>
+          <input class="form-control" type="file" id="input-image" />
+        </div>
+        <div class="d-flex justify-content-end">
+          <button
+            type="submit"
+            class="btn"
+            style="background-color: orangered; color: white"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <hr class="mb-5 mt-5" />
+
+    <!-- My Project -->
+    <div class="container">
+      <div
+        class="mx-auto mb-5"
+        style="
+          width: 80%;
+          display: grid;
+          justify-content: space-between;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 20px;
+        "
+        id="project"
+      >
+        <div class="card" style="width: 18rem">
+          <img
+            src="../DAY 1-9/image/project.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Web Developer</h5>
+            <p style="font-size: 10px">Durasi : 5 bulan</p>
+            <p class="card-text mb-4" style="font-size: 10px">
+              &emsp;Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repudiandae amet sunt assumenda laudantium cumque recusandae
+              doloremque ut sint nesciunt officia architecto nemo molestias
+              quasi ad totam expedita veniam saepe, molestiae voluptas repellat
+              accusantium, accusamus libero perspiciatis explicabo.
+            </p>
+
+            <div class="icon mb-4 fs-3 d-flex justify-content-between">
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-square-js"></i>
+              <i class="fa-brands fa-html5"></i>
+              <i class="fa-brands fa-bootstrap"></i>
+            </div>
+            <div class="d-flex justify-content-end">
+              <a
+                href="#"
+                class="btn me-2 px-4"
+                style="background-color: orangered; color: white"
+                >edit</a
+              >
+              <a
+                href="#"
+                class="btn px-3"
+                style="background-color: orangered; color: white"
+                >delete</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Personal Website</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/c99e3a2c05.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="JS/contact-me.js"></script>
+  </head>
+
+  <body style="font-family: 'Poppins', sans-serif">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-5 fw-bold">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../DAY 1-9/image/logo.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="my-project.html">Add Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonials</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button
+              type="button"
+              class="btn"
+              style="background-color: orangered"
+            >
+              <a
+                href="#"
+                class="link-secondary active"
+                style="text-decoration: none; color: white"
+                >Contact me</a
+              >
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5" style="width: 30%">
+      <form>
+        <h1 class="text-center">REGISTER</h1>
+        <div class="mb-3">
+          <label for="input-name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="input-name" />
+        </div>
+        <div class="mb-3">
+          <label for="input-email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="input-email" />
+        </div>
+        <div class="mb-3">
+          <label for="input-phone" class="form-label">Phone</label>
+          <input type="number" class="form-control" id="input-phone" />
+        </div>
+        <div class="mb-3">
+            <label for="input-subject">Subject</label>
+          <select class="form-select" id="input-subject">
+            <option selected hidden>Choose...</option>
+            <option value="1">Frontend</option>
+            <option value="2">Backend</option>
+            <option value="3">Fullstack</option>
+          </select>
+        </div>
+        <div class="d-flex flex-column mb-3">
+            <label for="input-text-area">Your massage</label>
+            <textarea
+              name=""
+              id="input-text-area"
+              cols="30"
+              rows="10"
+              style="resize: none"
+            ></textarea>
+          </div>
+          <div class="d-flex justify-content-end mb-5">
+            <button
+              type="submit"
+              class="btn"
+              onclick="submitData()"
+              style="background-color: orangered; color: white"
+            >
+              Submit
+            </button>
+          </div>
+      </form>
+    </div>
+  </body>
+</html>
