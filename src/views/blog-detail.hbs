@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -48,12 +47,10 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
-                class="nav-link active"
+                class="nav-link"
                 aria-current="page"
                 href="/"
-                style="color: orangered"
-                >Home</a
-              >
+              >Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/add-project">Add Project</a>
@@ -72,28 +69,53 @@
                 href="/contact-me"
                 class="link-secondary"
                 style="text-decoration: none; color: white"
-                >Contact me</a
-              >
+              >Contact me</a>
             </button>
           </form>
         </div>
       </div>
     </nav>
 
-    <div class="container my-5">
-      <div class="blog-detail-container">
-        <h1>
-          {{title}}
-        </h1>
-        <div class="author">12 Jul 2021 22:30 WIB | Ichsan Emrald Alamsyah {{id}}</div>
-        <div class="my-3">
-          <img class="w-100" src="/image/project.jpg" alt="detail" />
-        </div>
-
-        <p>
-          {{content}}
-        </p>
+    <div
+      class="container my-5 w-80 d-flex shadow-sm p-3 mb-5 bg-body rounded"
+      style=""
+    >
+      <div class="w-50">
+        <img
+          src="/image/project.jpg"
+          alt=""
+          class="w-100"
+          style="object-fit: cover;"
+        />
       </div>
+      <div class="pt-5 ps-5">
+        <h1 class="fw-bold">{{data.title}}</h1>
+        <p style="color: rgb(186, 186, 186);" class="pb-5">Durasi :
+          {{data.duration}}
+          | Arya Fadhilah Dzaki</p>
+
+        <p>Technologies : </p>
+        <div class="gap-5 mb-3" style="font-size: 50px;">
+          {{#if data.nodejs}}
+            <a><i class="fa-brands fa-node-js"></i></a>
+          {{/if}}
+          {{#if data.reactjs}}
+            <a><i class="fa-brands fa-react"></i></a>
+          {{/if}}
+          {{#if data.js}}
+            <a><i class="fa-brands fa-js"></i></a>
+          {{/if}}
+          {{#if data.vuejs}}
+            <a><i class="fa-brands fa-vuejs"></i></a>
+          {{/if}}
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="container w-80">
+      <p
+      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.content}}</p>
     </div>
   </body>
 </html>
