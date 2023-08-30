@@ -157,17 +157,17 @@
             <div class="card-body">
               <h5 class="card-title fw-bold">
                 <a
-                  href="/blog-detail/{{@index}}"
+                  href="/blog-detail/{{this.id}}"
                   style="text-decoration: none; color:black;"
                 >{{this.title}}</a>
               </h5>
               <p style="font-size: 10px">Durasi :
                 {{this.duration}}
                 | Arya Fadhilah Dzaki</p>
-                <div style="height: 100px;">
-              <p class="card-text mb-4" style="font-size: 10px">
-                &emsp;{{this.content}}
-              </p></div>
+              <div style="height: 100px;">
+                <p class="card-text mb-4" style="font-size: 10px">
+                  &emsp;{{this.content}}
+                </p></div>
               <div class="gap-5 fs-3 mb-3">
                 {{#if this.nodejs}}
                   <a><i class="fa-brands fa-node-js"></i></a>
@@ -184,12 +184,12 @@
               </div>
               <div class="d-flex justify-content-end">
                 <a
-                  href="/edit-blog/{{@index}}"
+                  href="/edit-blog/{{this.id}}"
                   class="btn me-2 px-4"
                   style="background-color: orangered; color: white"
                 >edit</a>
                 <a
-                  href="/delete-blog/{{@index}}"
+                  href="/delete-blog/{{this.id}}"
                   class="btn px-3"
                   style="background-color: orangered; color: white"
                 >delete</a>
