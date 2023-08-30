@@ -8,31 +8,11 @@ app.set("views", path.join(__dirname, "src/views"));
 app.use(express.static("src/assets"));
 app.use(express.urlencoded({ extended: false }));
 
-// Dummy Data
-const dataBlog = [
-  {
-    title: "Web developer",
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae amet sunt assumenda laudantium cumque recusandae doloremque ut sint nesciunt officia architecto nemo molestias quasi ad totam expedita veniam saepe, molestiae voluptas repellat accusantium, accusamus libero perspiciatis explicabo.",
-    duration: "2 bulan",
-    image: "/image/project.jpg",
-    nodejs: true,
-    reactjs: true,
-    js: true,
-    vuejs: true,
-  },
-  {
-    title: "Web E-Commerce",
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae amet sunt assumenda laudantium cumque recusandae doloremque ut sint nesciunt officia architecto nemo molestias quasi ad totam expedita veniam saepe, molestiae voluptas repellat accusantium, accusamus libero perspiciatis explicabo.",
-    duration: "5 bulan",
-    image: "/image/project.jpg",
-    nodejs: true,
-    reactjs: true,
-    js: true,
-    vuejs: true,
-  },
-];
+// sequelize init
+const config = require('./src/config/config.json');
+const { Sequelize, QueryTypes } = require('sequelize');
+const sequelize = new Sequelize(config.development);
+
 
 app.get("/add-project", (req, res) => {
   res.render("add-project");
@@ -93,8 +73,16 @@ app.get("/blog-detail/:id", (req, res) => {
   res.render("blog-detail", { data: dataBlog[id] });
 });
 
-app.get("/", (req, res) => {
-  res.render("index", { dataBlog });
+app.get("/", async (req, res) => {
+  try {
+    const query = `SELECT id, title, content, duration, image, nodejs, reactjs, js, vuejs FROM "Projects";`
+    let obj = await sequelize.query(query, {type: QueryTypes.SELECT})
+
+    console.log(obj)
+    res.render("index", { dataBlog: obj });
+  } catch (error) {
+
+  }
 });
 
 
