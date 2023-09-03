@@ -25,7 +25,6 @@
       src="https://kit.fontawesome.com/c99e3a2c05.js"
       crossorigin="anonymous"
     ></script>
-    {{!-- <script src="JS/my-project.js"></script> --}}
 
   </head>
 
@@ -34,7 +33,7 @@
     <!-- Input Project -->
     <div class="container"  id="input-project">
       <h1 class="mt-2 fw-bold text-center">ADD MY PROJECT</h1>
-      <form name="frm" class="mt-3 mb-5" method="post" action="add-project">
+      <form name="frm" class="mt-3 mb-5" method="post" action="add-project" enctype="multipart/form-data">
         <div class="mb-3">
           <label for="input-name-project" class="form-label"
             >Project name</label
@@ -44,11 +43,11 @@
         <div class="d-flex mb-3">
           <div style="width: 50%">
             <label for="date-start">Date start</label>
-            <input type="date" id="date-start" style="width: 95%" name="dateStart" />
+            <input type="date" id="date-start" style="width: 95%" name="startDate" />
           </div>
           <div style="width: 50%">
             <label for="date-end">Date end</label>
-            <input type="date" id="date-end" style="width: 100%" name="dateEnd"/>
+            <input type="date" id="date-end" style="width: 100%" name="endDate"/>
           </div>
         </div>
         <div class="d-flex flex-column">

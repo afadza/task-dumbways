@@ -15,9 +15,12 @@ module.exports = (sequelize, DataTypes) => {
   }
   Project.init({
     title: DataTypes.STRING,
+    author: DataTypes.STRING,
     content: DataTypes.STRING,
-    duration: DataTypes.STRING,
     image: DataTypes.STRING,
+    startDate: DataTypes.DATE,
+    endDate: DataTypes.DATE,
+    duration: DataTypes.STRING,
     nodejs: DataTypes.BOOLEAN,
     reactjs: DataTypes.BOOLEAN,
     js: DataTypes.BOOLEAN,
@@ -25,9 +28,6 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Project',
-    timestamps: true,
-    createdAt: true,
-    updatedAt: 'updateTimestamp'
   });
   return Project;
 };
